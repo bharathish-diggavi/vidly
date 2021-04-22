@@ -1,0 +1,16 @@
+.movies__container {
+  display: flex;
+  background-color: white;
+  min-width: 60%;
+  min-height: 50vh;
+}
+.sidebar__container {
+  display: flex;
+  flex-direction: column;
+  flex: 0.35;
+}
+.movies__Table__container {
+  display: flex;
+  flex-direction: column;
+  flex: 0.65;
+}
