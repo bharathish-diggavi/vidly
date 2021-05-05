@@ -8,8 +8,7 @@ const TableBody = ({ data, columns }) => {
   // }
 
   const generateKey = (key, column) => {
-    console.log(key._id + (column.path || column.key));
-    return key._id + (column.path || column.key);to
+    return key._id + (column.path || column.key);
   };
   return (
     <tbody>
@@ -17,7 +16,7 @@ const TableBody = ({ data, columns }) => {
         <tr key={item._id}>
           {columns.map((column) =>
             column.content ? (
-              <td>{column.content(item)}</td>
+              <td key={generateKey(item, column)}>{column.content(item)}</td>
             ) : (
               <td key={generateKey(item, column)}>
                 {_.get(item, column.path)}
